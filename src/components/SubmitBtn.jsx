@@ -8,7 +8,7 @@ const SubmitBtn = ({ text }) => {
     return (
         <button
             type='submit'
-            className='btn btn-primary btn-block'
+            className='btn btn-primary btn-block font-playFair'
             disabled={isSubmitting}
         >
             {/* Display a loading spinner and "sending" text when submitting */}

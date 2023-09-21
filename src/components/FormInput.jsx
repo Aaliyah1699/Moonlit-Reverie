@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const FormInput = ({ label, name, type, defaultValue, size }) => {
     return (
-        <div className='form-control'>
+        <div className='form-control font-playFair'>
             <label htmlFor={name} className='label'>
                 <span className='label-text capitalize'>{label}</span>
             </label>
