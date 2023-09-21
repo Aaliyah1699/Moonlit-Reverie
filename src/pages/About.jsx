@@ -13,7 +13,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <p className='mt-6 text-lg leading-8 max-w-2xl mx-auto font-playFair font-normal leading-loose'>
+            <p className='mt-6 text-lg max-w-2xl mx-auto font-playFair font-normal leading-loose'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Tempore quae quam blanditiis vitae, dolor non eveniet ipsum
                 voluptatibus, quia optio aut! Perferendis ipsa cumque ipsam
