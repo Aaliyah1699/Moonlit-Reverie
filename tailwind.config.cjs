@@ -6,6 +6,7 @@ export default {
         extend: {
             fontFamily: {
                 playFair: ['Playfair Display', 'serif'],
+                britney: ['Britney', 'cursive'],
             },
         },
     },
