@@ -8,20 +8,20 @@ const SubmitBtn = ({ text }) => {
     return (
         <button
             type='submit'
-            className='btn btn-primary btn-block font-playFair'
+            className='btn btn-primary btn-block font-bonny'
             disabled={isSubmitting}
         >
             {/* Display a loading spinner and "sending" text when submitting */}
             {isSubmitting ? (
                 <>
                     <span className='loading loading-spinner'></span>
-                    sending...
+                    Casting...
                 </>
             ) : (
                 // Display the provided text or default to "submit"
-                text || 'submit'
+                text || 'Conjure'
             )}
-        </button>
+        </button> 
     );
 };
 

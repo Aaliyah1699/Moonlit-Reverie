@@ -7,9 +7,9 @@ const OrdersList = () => {
     const { orders, meta } = useLoaderData();
 
     return (
-        <div className='mt-8 font-playFair'>
+        <div className='mt-8 font-bonny'>
             <h4 className='mb-4 capitalize'>
-                Total orders : {meta.pagination.total}
+                Total Brews : {meta.pagination.total}
             </h4>
             <div className='overflow-x-auto'>
                 <table className='table table-zebra'>

@@ -5,8 +5,8 @@ const ErrorElement = () => {
     console.log(error);
 
     return (
-        <h4 className='font-bold text-4xl font-playFair'>
-            There was an error...
+        <h4 className='font-bold text-4xl font-bonny'>
+            The sorcery struck a snag, do not fret...
         </h4>
     );
 };

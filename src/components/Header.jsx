@@ -18,33 +18,33 @@ const Header = () => {
     };
 
     return (
-        <header className='bg-neutral py-2 text-neutral-content font-playFair'>
+        <header className='bg-neutral py-2 text-neutral-content font-bonny'>
             <div className='align-element flex justify-center sm:justify-end'>
                 {user ? (
                     <div className='flex gap-x-2 sm:gap-x-8 items-center'>
-                        <p className='text-xs sm:text-sm'>
-                            Hello, {user.username}
+                        <p className='text-lg sm:text-sm'>
+                            We've been expecting you, {user.username}
                         </p>
                         <button
-                            className='btn btn-xs btn-outline btn-primary'
+                            className='btn btn-xs btn-outline btn-primary text-sm'
                             onClick={handleLogout}
                         >
-                            logout
+                            Seal the Portal
                         </button>
                     </div>
                 ) : (
-                    <div className='flex gap-x-6 justify-center items-center'>
+                    <div className='flex gap-x-6 justify-center items-center text-sm'>
                         <Link
                             to='/login'
-                            className='link link-hover text-xs sm:text-sm'
+                            className='link link-hover text-sm sm:text-sm'
                         >
-                            Sign in / Guest
+                            Enter the Coven / Magical Visitor
                         </Link>
                         <Link
                             to='/register'
-                            className='link link-hover text-xs sm:text-sm'
+                            className='link link-hover text-sm sm:text-sm'
                         >
-                            Create Account
+                            Cast a Spell
                         </Link>
                     </div>
                 )}

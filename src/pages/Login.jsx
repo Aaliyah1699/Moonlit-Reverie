@@ -15,12 +15,12 @@ export const action =
         try {
             const response = await customFetch.post('/auth/local', data);
             store.dispatch(loginUser(response.data));
-            toast.success('logged in successfully');
+            toast.success('Our book opened its pages to you, blessed be.');
             return redirect('/');
         } catch (error) {
             const errorMessage =
                 error?.response?.data?.error?.message ||
-                'please double check your credentials';
+                'That spell is not the right one for this moon.';
             toast.error(errorMessage);
             return null;
         }
@@ -38,40 +38,42 @@ const Login = () => {
                 password: 'secret',
             });
             dispatch(loginUser(response.data));
-            toast.success('welcome guest user');
+            toast.success('Our realm welcomes your energy');
             navigate('/');
         } catch (error) {
             console.log(error);
-            toast.error('guest user login error. please try again');
+            toast.error('The portal seal remains unbroken...please cast again');
         }
     };
 
     return (
-        <section className='h-screen grid place-items-center font-playFair'>
+        <section className='h-screen grid place-items-center font-bonny'>
             <Form
                 method='post'
                 className='card w-96  p-8 bg-base-100 shadow-lg flex flex-col gap-y-4'
             >
-                <h4 className='text-center text-3xl font-bold'>Login</h4>
+                <h4 className='text-center text-3xl font-bold'>
+                    Unlock the Portal
+                </h4>
                 <FormInput type='email' label='email' name='identifier' />
                 <FormInput type='password' label='password' name='password' />
                 <div className='mt-4'>
-                    <SubmitBtn text='login' />
+                    <SubmitBtn text='Access Your Magic' />
                 </div>
                 <button
                     type='button'
                     className='btn btn-secondary btn-block'
                     onClick={loginAsGuestUser}
                 >
-                    guest user
+                    Magical Visitor
                 </button>
                 <p className='text-center'>
-                    Not a member yet?{' '}
+                    New to the night?{' '}
                     <Link
                         to='/register'
                         className='ml-2 link link-hover link-primary capitalize'
                     >
-                        register
+                        Craft a Spell
                     </Link>
                 </p>
             </Form>

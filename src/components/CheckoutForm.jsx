@@ -38,13 +38,13 @@ export const action =
             );
             queryClient.removeQueries(['orders']);
             store.dispatch(clearCart());
-            toast.success('order placed successfully');
+            toast.success('Cauldron bubbled, brew is ready!');
             return redirect('/orders');
         } catch (error) {
             console.log(error);
             const errorMessage =
                 error?.response?.data?.error?.message ||
-                'there was an error placing your order';
+                'The ingredients did not stir correctly...';
             toast.error(errorMessage);
             if (error?.response?.status === 401 || 403)
                 return redirect('/login');
@@ -54,14 +54,22 @@ export const action =
 
 const CheckoutForm = () => {
     return (
-        <Form method='POST' className='flex flex-col gap-y-4 font-playFair'>
+        <Form method='POST' className='flex flex-col gap-y-4 font-bonny'>
             <h4 className='font-medium text-xl capitalize'>
-                shipping information
+                Address for thy Raven
             </h4>
-            <FormInput label='first name' name='name' type='text' />
-            <FormInput label='address' name='address' type='text' />
+            <FormInput
+                label='What the Coven Calls Thee'
+                name='name'
+                type='text'
+            />
+            <FormInput
+                label='Location of Thy Magical Lair'
+                name='address'
+                type='text'
+            />
             <div className='mt-4'>
-                <SubmitBtn text='place your order' />
+                <SubmitBtn text='Brew thy desire' />
             </div>
         </Form>
     );

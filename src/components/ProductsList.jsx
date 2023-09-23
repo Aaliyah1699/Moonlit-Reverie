@@ -5,7 +5,7 @@ const ProductsList = () => {
     const { products } = useLoaderData();
 
     return (
-        <div className='mt-12 grid gap-y-8 font-playFair'>
+        <div className='mt-12 grid gap-y-8 font-bonny'>
             {products.map((product) => {
                 const { title, price, image, company } = product.attributes;
                 const dollarsAmount = formatPrice(price);

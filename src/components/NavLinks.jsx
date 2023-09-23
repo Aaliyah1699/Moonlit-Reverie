@@ -2,12 +2,12 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 const links = [
-    { id: 1, url: '/', text: 'home' },
-    { id: 2, url: 'about', text: 'about' },
-    { id: 3, url: 'products', text: 'products' },
-    { id: 4, url: 'cart', text: 'cart' },
-    { id: 5, url: 'checkout', text: 'checkout' },
-    { id: 6, url: 'orders', text: 'orders' },
+    { id: 1, url: '/', text: 'haven' },
+    { id: 2, url: 'about', text: 'our coven' },
+    { id: 3, url: 'products', text: 'potions' },
+    { id: 4, url: 'cart', text: 'cauldron' },
+    { id: 5, url: 'checkout', text: 'cast Spell' },
+    { id: 6, url: 'orders', text: 'concoctions' },
 ];
 
 const NavLinks = () => {

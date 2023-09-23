@@ -11,12 +11,12 @@ export const action = async ({ request }) => {
 
     try {
         const response = await customFetch.post('/auth/local/register', data);
-        toast.success('account created successfully');
+        toast.success('Our book of shadows now bears your markings');
         return redirect('/login');
     } catch (error) {
         const errorMessage =
             error?.response?.data?.error?.message ||
-            'please double check your credentials';
+            'Check your book of shadows for the proper incantation';
         toast.error(errorMessage);
         return null;
     }
@@ -29,20 +29,22 @@ const Register = () => {
                 method='POST'
                 className='card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4'
             >
-                <h4 className='text-center text-3xl font-bold'>Register</h4>
+                <h4 className='text-center text-3xl font-bold'>
+                    Join the Coven
+                </h4>
                 <FormInput type='text' label='username' name='username' />
                 <FormInput type='email' label='email' name='email' />
                 <FormInput type='password' label='password' name='password' />
                 <div className='mt-4'>
-                    <SubmitBtn text='register' />
+                    <SubmitBtn text='Craft a Spell' />
                 </div>
                 <p className='text-center'>
-                    Already a member?
+                    One of Us Already?
                     <Link
                         to='/login'
                         className='ml-2 link link-hover link-primary capitalize'
                     >
-                        login
+                        Unlock the Portal
                     </Link>
                 </p>
             </Form>

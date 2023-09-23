@@ -1,4 +1,5 @@
 import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { GiPointyHat, GiCauldron, GiKnockedOutStars } from 'react-icons/gi';
 
 const ComplexPaginationContainer = () => {
     const { meta } = useLoaderData();
@@ -17,7 +18,7 @@ const ComplexPaginationContainer = () => {
             <button
                 key={pageNumber}
                 onClick={() => handlePageChange(pageNumber)}
-                className={`btn btn-xs font-playFair sm:btn-md border-none join-item ${
+                className={`btn btn-xs font-bonny sm:btn-md border-none join-item ${
                     activeClass ? 'bg-base-300 border-base-300 ' : ''
                 }`}
             >
@@ -37,7 +38,7 @@ const ComplexPaginationContainer = () => {
         if (page > 2) {
             pageButtons.push(
                 <button className='join-item btn btn-xs sm:btn-md' key='dots-1'>
-                    ...
+                    <GiKnockedOutStars className='h-5 w-5' />
                 </button>
             );
         }
@@ -52,7 +53,7 @@ const ComplexPaginationContainer = () => {
         if (page < pageCount - 1) {
             pageButtons.push(
                 <button className='join-item btn btn-xs sm:btn-md' key='dots-2'>
-                    ...
+                    <GiKnockedOutStars className='h-5 w-5' />
                 </button>
             );
         }
@@ -80,7 +81,7 @@ const ComplexPaginationContainer = () => {
                         handlePageChange(prevPage);
                     }}
                 >
-                    Prev
+                    <GiCauldron className='h-5 w-5' />
                 </button>
                 {renderPageButtons()}
                 <button
@@ -91,7 +92,7 @@ const ComplexPaginationContainer = () => {
                         handlePageChange(nextPage);
                     }}
                 >
-                    Next
+                    <GiPointyHat className='h-5 w-5' />
                 </button>
             </div>
         </div>

@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 const themes = {
     autumn: 'autumn',
     coffee: 'coffee',
+    halloween: 'halloween',
+    bumblebee: 'bumblebee',
 };
 
 const getUserFromLocalStorage = () => {
@@ -33,11 +35,11 @@ const userSlice = createSlice({
         logoutUser: (state) => {
             state.user = null;
             localStorage.removeItem('user');
-            toast.success('Logged out successfully');
+            toast.success('The ravens will wait for your return');
         },
         toggleTheme: (state) => {
-            const { coffee, autumn } = themes;
-            state.theme = state.theme === coffee ? autumn : coffee;
+            const { halloween, autumn } = themes;
+            state.theme = state.theme === halloween ? autumn : halloween;
             document.documentElement.setAttribute('data-theme', state.theme);
             localStorage.setItem('theme', state.theme);
         },

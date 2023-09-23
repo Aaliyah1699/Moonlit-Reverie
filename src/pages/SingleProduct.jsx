@@ -53,14 +53,14 @@ const SingleProduct = () => {
     };
 
     return (
-        <section className='font-playFair'>
-            <div className='text-md breadcrumbs font-playFair'>
+        <section className='font-bonny'>
+            <div className='text-md breadcrumbs font-bonny'>
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='/'>Haven</Link>
                     </li>
                     <li>
-                        <Link to='/products'>Products</Link>
+                        <Link to='/products'>Potions</Link>
                     </li>
                 </ul>
             </div>
@@ -83,7 +83,7 @@ const SingleProduct = () => {
                     {/* COLORS */}
                     <div className='mt-6'>
                         <h4 className='text-md font-medium tracking-wider capitalize'>
-                            colors
+                            Mystical Tones
                         </h4>
                         <div className='mt-2'>
                             {colors.map((color) => {
@@ -103,10 +103,10 @@ const SingleProduct = () => {
                         </div>
                     </div>
                     {/* AMOUNT */}
-                    <div className='form-control w-full max-w-xs font-playFair'>
+                    <div className='form-control w-full max-w-xs font-bonny'>
                         <label className='label' htmlFor='amount'>
                             <h4 className='text-md font-medium -tracking-wider capitalize'>
-                                amount
+                                Volume of Vials
                             </h4>
                         </label>
                         <select
@@ -124,7 +124,7 @@ const SingleProduct = () => {
                             className='btn btn-secondary btn-md'
                             onClick={addToCart}
                         >
-                            Add to bag
+                            Combine into Brew
                         </button>
                     </div>
                 </div>

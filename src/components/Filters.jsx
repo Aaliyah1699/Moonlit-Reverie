@@ -8,18 +8,18 @@ const Filters = () => {
     const { search, company, category, shipping, order, price } = params;
 
     return (
-        <Form className='bg-base-200 rounded-md px-8 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center font-playFair'>
+        <Form className='bg-base-200 rounded-md px-8 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center font-bonny'>
             {/* SEARCH */}
             <FormInput
-                type='search'
-                label='search product'
+                type='search '
+                label='Search Crystal Ball'
                 name='search'
                 size='input-sm'
                 defaultValue={search}
             />
             {/* CATEGORIES */}
             <FormSelect
-                label='select category'
+                label='Choose Realm'
                 name='category'
                 list={meta.categories}
                 size='select-sm'
@@ -27,7 +27,7 @@ const Filters = () => {
             />
             {/* COMPANIES */}
             <FormSelect
-                label='select company'
+                label='Pick Coven'
                 name='company'
                 list={meta.companies}
                 size='select-sm'
@@ -35,7 +35,7 @@ const Filters = () => {
             />
             {/* ORDER */}
             <FormSelect
-                label='sort by'
+                label='Organize by Spell'
                 name='order'
                 list={['a-z', 'z-a', 'high', 'low']}
                 size='select-sm'
@@ -44,23 +44,23 @@ const Filters = () => {
             {/* PRICE */}
             <FormRange
                 name='price'
-                label='select price'
+                label='Set Spell Rate'
                 size='range-sm'
                 price={price}
             />
             {/* SHIPPING */}
             <FormCheckbox
                 name='shipping'
-                label='free shipping'
+                label='Free Raven Delivery'
                 size='checkbox-sm'
                 defaultValue={shipping}
             />
             {/* BUTTONS */}
             <button type='submit' className='btn btn-primary btn-sm'>
-                search
+                Unearth
             </button>
             <Link to='/products' className='btn btn-accent btn-sm'>
-                reset
+                Renew the Spell
             </Link>
         </Form>
     );

@@ -32,7 +32,7 @@ export const loader =
         const user = store.getState().userState.user;
 
         if (!user) {
-            toast.warn('You must logged in to view orders');
+            toast.warn('Only members of the coven may sip from the cauldron');
             return redirect('/login');
         }
         const params = Object.fromEntries([
@@ -48,7 +48,7 @@ export const loader =
             console.log(error);
             const errorMessage =
                 error?.response?.data?.error?.message ||
-                'there was an error placing your order';
+                'The cauldron bubbles over, please re-stir the brew';
             toast.error(errorMessage);
             if (error?.response?.status === 401 || 403)
                 return redirect('/login');
@@ -59,11 +59,11 @@ export const loader =
 const Orders = () => {
     const { meta } = useLoaderData();
     if (meta.pagination.total < 1) {
-        return <SectionTitle text='please make an order' />;
+        return <SectionTitle text='Conjure some magic from our wares!' />;
     }
     return (
         <>
-            <SectionTitle text='Your Orders' />
+            <SectionTitle text='Brews' />
             <OrdersList />
             <ComplexPaginationContainer />
         </>

@@ -5,7 +5,7 @@ const ProductsGrid = () => {
     const { products } = useLoaderData();
 
     return (
-        <div className='pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 font-playFair'>
+        <div className='pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 font-bonny'>
             {products.map((product) => {
                 const { title, price, image } = product.attributes;
                 const dollarsAmount = formatPrice(price);

@@ -10,14 +10,14 @@ const Cart = () => {
     );
 
     if (numItemsInCart === 0) {
-        return <SectionTitle text='Your cart is empty' />;
+        return <SectionTitle text='Your Basket is Barren of Brews' />;
     }
 
     return (
         <>
-            <SectionTitle text='Shopping Cart' />
-            <div className='mt-8 grid gap-8 lg:grid-cols-12 font-playFair font-bold text-lg'>
-                <div className='lg:col-span-8'>
+            <SectionTitle text='Enchanted Goods' />
+            <div className='mt-8 grid gap-8 lg:grid-cols-12 font-bonny font-bold text-lg'>
+                <div className='lg:col-span-8 '>
                     <CartItemsList />
                 </div>
                 <div className='lg:col-span-4 lg:pl-4'>
@@ -27,14 +27,14 @@ const Cart = () => {
                             to='/checkout'
                             className='btn btn-primary btn-block mt-8'
                         >
-                            proceed to checkout
+                            Complete Thy Spell
                         </Link>
                     ) : (
                         <Link
                             to='/login'
                             className='btn btn-primary btn-block mt-8'
                         >
-                            please login
+                            Access Your Magic
                         </Link>
                     )}
                 </div>

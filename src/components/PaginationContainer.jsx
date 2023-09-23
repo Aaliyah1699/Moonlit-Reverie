@@ -1,4 +1,5 @@
 import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { GiWitchFlight, GiRaven } from 'react-icons/gi';
 
 const PaginationContainer = () => {
     const { meta } = useLoaderData();
@@ -18,7 +19,7 @@ const PaginationContainer = () => {
     if (pageCount < 2) return null;
 
     return (
-        <div className='mt-16 flex justify-end font-playFair'>
+        <div className='mt-16 flex justify-end font-bonny'>
             <div className='join'>
                 <button
                     className='btn btn-xs sm:btn-md join-item'
@@ -28,7 +29,7 @@ const PaginationContainer = () => {
                         handlePageChange(prevPage);
                     }}
                 >
-                    Prev
+                    <GiRaven className='h-5 w-5' />
                 </button>
                 {pages.map((pageNumber) => {
                     return (
@@ -53,7 +54,7 @@ const PaginationContainer = () => {
                         handlePageChange(nextPage);
                     }}
                 >
-                    Next
+                    <GiWitchFlight className='h-5 w-5' />
                 </button>
             </div>
         </div>

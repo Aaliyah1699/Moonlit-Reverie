@@ -22,9 +22,9 @@ const ProductsContainer = () => {
     return (
         <>
             {/* HEADER */}
-            <div className='flex justify-between items-center mt-8 border-b border-base-300 pb-5 font-playFair'>
+            <div className='flex justify-between items-center mt-8 border-b border-base-300 pb-5 font-bonny'>
                 <h4 className='font-medium text-md'>
-                    {totalProducts} product{totalProducts > 1 && 's'}
+                    {totalProducts} Potion{totalProducts > 1 && 's'}
                 </h4>
                 <div className='flex gap-x-2'>
                     <button
@@ -46,8 +46,8 @@ const ProductsContainer = () => {
             {/* PRODUCTS */}
             <div>
                 {totalProducts === 0 ? (
-                    <h5 className='text-2xl mt-16'>
-                        Sorry, no products matched your search...
+                    <h5 className='text-2xl mt-16 font-bonny'>
+                        Oh no, the cauldron is empty - no potions found....
                     </h5>
                 ) : layout === 'grid' ? (
                     <ProductsGrid />

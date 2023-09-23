@@ -7,11 +7,12 @@ export default {
             fontFamily: {
                 playFair: ['Playfair Display', 'serif'],
                 britney: ['Britney', 'cursive'],
+                bonny: ['Bonny', 'serif'],
             },
         },
     },
     plugins: [require('daisyui'), require('@tailwindcss/typography')],
     daisyui: {
-        themes: ['autumn', 'coffee'],
+        themes: ['autumn', 'coffee', 'halloween', 'bumblebee'],
     },
 };

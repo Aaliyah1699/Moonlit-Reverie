@@ -9,10 +9,10 @@ const carouselImages = [hero1, hero2, hero3, hero4];
 
 const Hero = () => {
     return (
-        <div className='grid lg:grid-cols-2 gap-24 items-center font-playFair'>
+        <div className='grid lg:grid-cols-2 gap-24 items-center font-bonny'>
             <div>
                 <h1 className='max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl'>
-                    Here to change the way you shop
+                    Explore our emporium of bewitching delights
                 </h1>
                 <p className='mt-8 max-w-xl text-lg leading-8'>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -20,8 +20,8 @@ const Hero = () => {
                     aut obcaecati perferendis porro nobis.
                 </p>
                 <div className='mt-10'>
-                    <Link to='/products' className='btn btn-primary'>
-                        Our Products
+                    <Link to='/products' className='btn btn-primary '>
+                        Our Potions
                     </Link>
                 </div>
             </div>

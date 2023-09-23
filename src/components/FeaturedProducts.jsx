@@ -3,8 +3,8 @@ import SectionTitle from './SectionTitle';
 
 const FeaturedProducts = () => {
     return (
-        <div className='pt-24 font-playFair'>
-            <SectionTitle text='featured products' />
+        <div className='pt-24 font-bonny'>
+            <SectionTitle text='Spellbound Selection' />
             <ProductsGrid />
         </div>
     );

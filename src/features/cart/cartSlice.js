@@ -32,7 +32,7 @@ const cartSlice = createSlice({
             state.numItemsInCart += product.amount;
             state.cartTotal += product.price * product.amount;
             cartSlice.caseReducers.calculateTotals(state);
-            toast.success('Item added to cart');
+            toast.success(`We've gathered the ingredients for your potion`);
         },
         clearCart: (state) => {
             localStorage.setItem('cart', JSON.stringify(defaultState));
@@ -47,7 +47,7 @@ const cartSlice = createSlice({
             state.numItemsInCart -= product.amount;
             state.cartTotal -= product.price * product.amount;
             cartSlice.caseReducers.calculateTotals(state);
-            toast.error('Item removed from cart');
+            toast.error('An item has vanished from your brew');
         },
         editItem: (state, action) => {
             const { cartID, amount } = action.payload;
@@ -56,7 +56,7 @@ const cartSlice = createSlice({
             state.cartTotal += item.price * (amount - item.amount);
             item.amount = amount;
             cartSlice.caseReducers.calculateTotals(state);
-            toast.success('Cart updated');
+            toast.success('Recasting the spell to fit thy way');
         },
         calculateTotals: (state) => {
             state.tax = 0.1 * state.cartTotal;
