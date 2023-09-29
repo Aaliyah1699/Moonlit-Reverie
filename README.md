@@ -8,12 +8,19 @@ Happy Shopping! 🌙🔮🧙‍♀️ -> [Moonlit-Reverie Store](https://moonlit
 Moonlit Reverie leverages a powerful tech stack to deliver a magical shopping experience:
 
 **Strapi API Headless CMS**: To manage and serve product data efficiently.
+
 **Axios**: For making HTTP requests to the API.
+
 **Redux**: To manage application state and provide a seamless shopping cart experience.
+
 **Tailwind CSS**: Creating a bewitching and responsive user interface.
+
 **Daisy UI**: Enhancing the UI with elegant components.
+
 **React Router DOM**: For smooth navigation within the application.
+
 **React Query**: Simplifying data fetching and caching.
+
 **Toggle Theme**: Adding a touch of enchantment with theme toggling.
 
 ## Features
