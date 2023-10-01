@@ -3,6 +3,8 @@
 **Moonlit Reverie** is a captivating responsive React project with a bewitching Halloween theme. It's built using Vite and deployed on Netlify, making it a fast and accessible web application. Dive into this mystical world where users can explore the eerie store, register, and login to unlock a seamless shopping experience.
 Happy Shopping! 🌙🔮🧙‍♀️ [Moonlit-Reverie Store](https://moonlit-reverie-111.netlify.app/)
 
+Feel free to check out my [Portfolio](https://aaliyahm-portfolio.netlify.app/)🪄
+
 ## Technologies Used
 
 Moonlit Reverie leverages a powerful tech stack to deliver a magical shopping experience:
